@@ -10,21 +10,21 @@ Django is a high-level Python web framework that enables rapid development and c
 Ensure you have python and pip installed
 
 ## Installation
-To install django, open command prompt and run this command:
-python -m pip install django
+To install django, open command prompt and run this command: <br>
+python -m pip install django<br>
 Now django is successfully downloaded.
 
 ### Create Project
-Run following commands in vs code terminal:
-django-admin startproject projectname
+Run following commands in vs code terminal:<br>
+django-admin startproject projectname<br>
 This will create Project
 ### Create App
-python manage.py startapp appname
+python manage.py startapp appname<br>
 This will create app and all its files.
 ### Register app
 Register your app in settings.py file under 'installed app' secton
 ### Run project
-python manage.py runserver
+python manage.py runserver<br>
 Follow the link and your admin site is ready
 
 
