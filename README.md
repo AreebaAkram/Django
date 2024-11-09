@@ -14,16 +14,16 @@ To install django, open command prompt and run this command:
 python -m pip install django
 Now django is successfully downloaded.
 
-## Create Project
+### Create Project
 Run following commands in vs code terminal:
 django-admin startproject projectname
 This will create Project
-
+### Create App
 python manage.py startapp appname
 This will create app and all its files.
-
+### Register app
 Register your app in settings.py file under 'installed app' secton
-
+### Run project
 python manage.py runserver
 Follow the link and your admin site is ready
 
