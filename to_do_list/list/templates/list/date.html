@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            padding: 20px;
+            margin: 0;
+            background-image: url(https://img.freepik.com/free-photo/blue-toned-collection-paper-sheets-with-copy-space_23-2148320445.jpg?t=st=1731084087~exp=1731087687~hmac=9170be4f4d4c2212525ffbc3a1d0ee884d7d28d691e22b9042bc72a394319d66&w=826);
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+        h1 {
+            text-align: center;
+            color: teal;
+        }
+        form {
+            background-color: beige;
+            width: 30%;
+            padding: 20px;
+            margin: 0 auto;
+            border: 2px solid teal;
+        }
+        table {
+            width: 15%;
+            margin: 0 auto;
+            background-color: rgb(238, 238, 226);
+            border-collapse: collapse;
+            margin-top: 35px;
+        }
+
+        thead {
+            text-align: center;
+            color: teal;
+        }
+
+        th {
+            text-align: center;
+            font-size: large;
+            background-color: teal;
+            color: white;
+            padding: 10px;
+            border: 1px solid black;
+        }
+
+        td {
+            text-align: left;
+            padding: 5px;
+            border: 1px solid black;
+        }
+
+        input[type="submit"] {
+            background-color: teal;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            margin-top: 10px;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        input[type="submit"]:hover {
+            background-color: rgb(4, 102, 102);
+        }
+    </style>
+</head>
+<body>
+    <h1>Add date</h1>
+    <form action="{% url 'date' %}" method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <input type="submit" value="Submit">
+    </form>
+    <table>
+        <thead>
+            <tr>
+                <th>Date</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for date in data %}
+            <tr>
+                <td>{{ date.Date }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+</html>

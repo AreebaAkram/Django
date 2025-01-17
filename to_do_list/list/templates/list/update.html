@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+         body {
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            padding: 20px;
+            margin: 0;
+            background-image: url(https://img.freepik.com/free-photo/blue-toned-collection-paper-sheets-with-copy-space_23-2148320445.jpg?t=st=1731084087~exp=1731087687~hmac=9170be4f4d4c2212525ffbc3a1d0ee884d7d28d691e22b9042bc72a394319d66&w=826);
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+
+        h1 {
+            text-align: center;
+            color: teal;
+        }
+        form {
+            background-color: beige;
+            width: 30%;
+            padding: 20px;
+            margin: 0 auto;
+            border: 2px solid teal;
+        }
+        input[type="submit"] {
+            background-color: teal;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            margin-top: 10px;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        input[type="submit"]:hover {
+            background-color: rgb(4, 102, 102);
+        }
+    </style>
+</head>
+<body>
+    <h1>Update</h1>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <input type="submit" value="update">
+    </form>
+</body>
+</html>
